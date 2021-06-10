@@ -53,4 +53,5 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem "devise", git: "https://github.com/heartcombo/devise"
+gem "acts_as_favoritor", git: "https://github.com/jonhue/acts_as_favoritor"
 

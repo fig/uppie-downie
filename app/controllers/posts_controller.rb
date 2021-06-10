@@ -1,5 +1,14 @@
 class PostsController < ApplicationController
-  before_action :set_post, only: %i[ show edit update destroy ]
+  before_action :set_post, only: %i[ show edit update destroy toggle_upvote toggle_downvote ]
+  before_action :authenticate_user!, only: %i[ toggle_upvote toggle_downvote ]
+
+  def toggle_upvote
+    current_user.favorited?(@post) ? current_user.unfavorite(@post) : current_user.favorite(@post)
+  end
+  
+  def toggle_downvote
+    current_user.favorited?(@post) ? current_user.unfavorite(@post) : current_user.favorite(@post)
+  end
 
   # GET /posts or /posts.json
   def index

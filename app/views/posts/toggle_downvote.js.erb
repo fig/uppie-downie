@@ -1,0 +1,9 @@
+var postId = "<%= @post.id %>";
+
+function toggleDownvote(postId, innerHTML) {
+  let downvote = document.querySelector(`.downvote[data-id="${ postId }"]`);
+  downvote.classList.toggle("active");
+}
+
+toggleDownvote(postId);
+

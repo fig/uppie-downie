@@ -9,6 +9,13 @@ GIT
       responders
       warden (~> 1.2.3)
 
+GIT
+  remote: https://github.com/jonhue/acts_as_favoritor
+  revision: 9e6a0289d31bf7c2177b8a8623579013311cb4ce
+  specs:
+    acts_as_favoritor (5.0.1)
+      activerecord (>= 5.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -213,6 +220,7 @@ PLATFORMS
   x86_64-openbsd
 
 DEPENDENCIES
+  acts_as_favoritor!
   bootsnap (>= 1.4.4)
   byebug
   capybara (>= 3.26)

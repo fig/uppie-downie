@@ -1,5 +1,17 @@
 <p id="notice"><%= notice %></p>
 
+<% if user_signed_in? %>
+  <%= link_to toggle_upvote_post_path(@post), remote: true, method: :post do %>
+    <div class="upvote<%= " active" if current_user.favorited?(@post) %>" data-id="<%= @post.id %>">Upvote</div>
+  <% end %>
+
+  <%= link_to toggle_downvote_post_path(@post), remote: true, method: :post do %>
+    <div class="downvote<%= " active" if current_user.favorited?(@post) %>" data-id="<%= @post.id %>">Downvote</div>
+  <% end %>
+<% else %>
+  <h3>Please log in to vote</h3>
+<% end %>
+
 <p>
   <strong>Title:</strong>
   <%= @post.title %>
