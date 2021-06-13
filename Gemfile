@@ -7,6 +7,7 @@ gem "devise", git: "https://github.com/heartcombo/devise"
 gem "jbuilder", "~> 2.7"
 gem "puma", "~> 5.0"
 gem "rails", "~> 6.1.3", ">= 6.1.3.2"
+gem "redis", "~> 4.3"
 gem "sass-rails", ">= 6"
 gem "turbo-rails", "~> 0.5.10"
 gem "tzinfo-data", platforms: %i[mingw mswin x64_mingw jruby]
