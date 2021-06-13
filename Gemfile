@@ -61,3 +61,5 @@ end
 gem "tzinfo-data", platforms: %i[mingw mswin x64_mingw jruby]
 
 gem "devise", git: "https://github.com/heartcombo/devise"
+
+gem "acts_as_votable", "~> 0.13.1"
