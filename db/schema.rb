@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_05_22_103302) do
+ActiveRecord::Schema.define(version: 2021_06_13_080202) do
 
   create_table "favorites", force: :cascade do |t|
     t.string "favoritable_type", null: false
@@ -34,6 +34,8 @@ ActiveRecord::Schema.define(version: 2021_05_22_103302) do
     t.text "body"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.text "favoritable_score"
+    t.text "favoritable_total"
   end
 
   create_table "users", force: :cascade do |t|
@@ -44,6 +46,8 @@ ActiveRecord::Schema.define(version: 2021_05_22_103302) do
     t.datetime "remember_created_at"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.text "favoritor_score"
+    t.text "favoritor_total"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
