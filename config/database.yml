@@ -22,4 +22,7 @@ test:
 
 production:
   <<: *default
-  database: db/production.sqlite3
+  adapter: postgresql
+  database: uppie-downie_production
+  username: uppie-downie
+  password: <%= ENV['UPPIE-DOWNIE_DATABASE_PASSWORD'] %>
