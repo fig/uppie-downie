@@ -1,5 +1,14 @@
 <p id="notice"><%= notice %></p>
 
+<%= button_to "UpVote", upvote_post_path(@post.to_global_id) %>
+
+<p>
+  <strong>Score:</strong>
+  <%= @post.weighted_score %>
+</p>
+
+<%= button_to "DownVote", downvote_post_path(@post.to_global_id) %>
+
 <p>
   <strong>Title:</strong>
   <%= @post.title %>
@@ -14,4 +23,3 @@
 <%= link_to 'Back', posts_path %>
 
 <%= render partial: "devise" %>
-
